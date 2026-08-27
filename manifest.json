@@ -1,0 +1,18 @@
+{
+  "name": "Guru-Utsav 2026",
+  "short_name": "GuruUtsav",
+  "description": "Campus Teachers' Day Gala: ₹100 Pass, Stage Acts, Live Countdown & Gratitude Wall",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23020617'/><circle cx='50' cy='50' r='38' fill='%23f59e0b'/><text x='50' y='62' font-size='42' text-anchor='middle' fill='%23020617'>🎓</text></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

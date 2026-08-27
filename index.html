@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guru-Utsav 2026 | Teachers' Day Campus Celebration & Portal</title>
+  <meta name="description" content="Official campus portal for Teachers' Day 2026 celebration: ₹100 contribution pass, activity & performance registration, live countdown, and wall of gratitude.">
+  <meta name="theme-color" content="#f59e0b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            mono: ['"Fira Code"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            maroon: {
+              800: '#5c0617',
+              900: '#3e020d',
+              950: '#250006'
+            },
+            royal: {
+              800: '#1e1b4b',
+              900: '#0f172a',
+              950: '#020617'
+            }
+          },
+          boxShadow: {
+            'glow': '0 0 25px -5px rgba(245, 158, 11, 0.4)',
+            'glow-lg': '0 0 45px -10px rgba(245, 158, 11, 0.5)',
+            'gold': '0 10px 30px -10px rgba(217, 119, 6, 0.3)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- QRCode.js for dynamic pass verification -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- HTML2Canvas for Pass download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950 overflow-x-hidden min-h-screen">
+
+  <!-- Background Decorative Ambient Glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-amber-500/15 via-orange-500/10 to-transparent blur-[120px] rounded-full"></div>
+    <div class="absolute top-[35%] -left-48 w-96 h-96 bg-purple-600/10 blur-[100px] rounded-full"></div>
+    <div class="absolute top-[65%] -right-48 w-96 h-96 bg-amber-600/10 blur-[100px] rounded-full"></div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="relative z-50 bg-gradient-to-r from-amber-600 via-orange-500 to-amber-600 text-slate-950 text-xs sm:text-sm font-semibold py-2 px-4 text-center shadow-md">
+    <div class="container mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-slate-950 text-amber-400">
+        🎓 SHIKSHAK PARV 2026
+      </span>
+      <span>Grand Campus Celebration on <strong>September 5th</strong> • Join the celebration with ₹100 contribution & win exciting honors!</span>
+      <a href="#donate-section" class="underline hover:text-white transition-colors ml-1 font-bold">Get Your Pass &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 p-0.5 shadow-glow group-hover:scale-105 transition-transform">
+            <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-amber-400"></i>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-serif font-bold text-xl sm:text-2xl tracking-tight text-white">Guru<span class="text-amber-400">Utsav</span></span>
+              <span class="text-[10px] px-1.5 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded font-mono font-bold">2026</span>
+            </div>
+            <p class="text-[11px] text-slate-400 tracking-wider uppercase font-medium">Teachers' Day Special</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#countdown-section" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-900/60 rounded-lg transition-colors">Countdown</a>
+          <a href="#donate-section" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-900/60 rounded-lg transition-colors flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            ₹100 Pass
+          </a>
+          <a href="#activities-section" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-900/60 rounded-lg transition-colors">Performances</a>
+          <a href="#gratitude-section" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-900/60 rounded-lg transition-colors">Gratitude Wall</a>
+          <a href="#spotlight-section" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-900/60 rounded-lg transition-colors">Faculty Awards</a>
+          <a href="#schedule-section" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-900/60 rounded-lg transition-colors">Schedule</a>
+        </nav>
+
+        <!-- CTA & Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button id="admin-panel-btn" class="p-2.5 text-slate-400 hover:text-amber-400 hover:bg-slate-900 rounded-xl border border-slate-800 transition-colors" title="Organizer Admin View">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </button>
+          
+          <button id="audio-toggle-btn" class="p-2.5 text-slate-400 hover:text-amber-400 hover:bg-slate-900 rounded-xl border border-slate-800 transition-colors" title="Toggle Celebration Chime">
+            <i data-lucide="volume-2" class="w-5 h-5"></i>
+          </button>
+
+          <a href="#donate-section" class="relative group overflow-hidden rounded-xl p-px font-semibold text-sm">
+            <span class="absolute inset-0 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 transition-all duration-300 group-hover:scale-105"></span>
+            <span class="relative flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-[11px] bg-slate-950 text-white group-hover:bg-opacity-90 transition-all">
+              <i data-lucide="ticket" class="w-4 h-4 text-amber-400"></i>
+              <span class="hidden sm:inline">Contribute</span> ₹100
+            </span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 text-slate-400 hover:text-white hover:bg-slate-900 rounded-xl border border-slate-800">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-2xl px-4 pt-2 pb-6 space-y-2">
+      <a href="#countdown-section" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900 hover:text-amber-400 text-sm font-medium">⏳ Countdown Timer</a>
+      <a href="#donate-section" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900 hover:text-amber-400 text-sm font-medium">🎟️ ₹100 Contribution & Pass</a>
+      <a href="#activities-section" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900 hover:text-amber-400 text-sm font-medium">🎭 Performance & Activity Signup</a>
+      <a href="#gratitude-section" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900 hover:text-amber-400 text-sm font-medium">💌 Wall of Gratitude</a>
+      <a href="#spotlight-section" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900 hover:text-amber-400 text-sm font-medium">🏆 Faculty Spotlight & Voting</a>
+      <a href="#schedule-section" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900 hover:text-amber-400 text-sm font-medium">📅 Event Day Schedule</a>
+      <button id="mobile-admin-btn" class="w-full text-left px-3 py-2.5 rounded-lg text-amber-400 bg-amber-500/10 border border-amber-500/20 text-sm font-medium">🛡️ Organizer Dashboard</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 space-y-24 sm:space-y-32 pb-24">
+
+    <!-- HERO & COUNTDOWN SECTION -->
+    <section id="countdown-section" class="pt-8 sm:pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold mb-6 shadow-inner animate-bounce-short">
+        <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+        <span>Honoring The Guiding Lights of Our Lives</span>
+        <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.15]">
+        Teachers' Day <br class="hidden sm:inline">
+        <span class="bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500 bg-clip-text text-transparent italic">
+          Grand Campus Gala
+        </span> 2026
+      </h1>
+
+      <p class="mt-6 text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+        Let’s unite as a campus to celebrate, perform, and express heartfelt gratitude to our beloved mentors. Join the celebration with a <strong>₹100 contribution</strong>, showcase your talent on stage, and make this day unforgettable!
+      </p>
+
+      <!-- LIVE COUNTDOWN CLOCK BOX -->
+      <div class="mt-12 max-w-3xl mx-auto bg-gradient-to-b from-slate-900/90 to-slate-950/90 p-6 sm:p-8 rounded-3xl border border-amber-500/30 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+        
+        <!-- Subtle Glow & Accents -->
+        <div class="absolute -right-12 -top-12 w-40 h-40 bg-amber-500/20 rounded-full blur-2xl"></div>
+        <div class="absolute -left-12 -bottom-12 w-40 h-40 bg-orange-500/20 rounded-full blur-2xl"></div>
+
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+          <div class="flex items-center gap-2.5 text-left">
+            <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-400">Live Countdown to Teachers' Day</span>
+          </div>
+          <span class="text-xs sm:text-sm font-mono text-slate-400 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">
+            Target: Sept 5, 2026 • 09:00 AM IST
+          </span>
+        </div>
+
+        <!-- Countdown Digits Grid -->
+        <div class="grid grid-cols-4 gap-2 sm:gap-4 font-mono">
+          
+          <!-- Days -->
+          <div class="bg-slate-950/90 rounded-2xl p-3 sm:p-5 border border-slate-800 flex flex-col items-center justify-center relative group">
+            <span id="cd-days" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white countdown-number">00</span>
+            <span class="text-[10px] sm:text-xs text-amber-400/90 uppercase tracking-widest mt-1 font-semibold">Days</span>
+            <div class="absolute inset-x-0 bottom-0 h-1 bg-amber-500/40 rounded-b-2xl"></div>
+          </div>
+
+          <!-- Hours -->
+          <div class="bg-slate-950/90 rounded-2xl p-3 sm:p-5 border border-slate-800 flex flex-col items-center justify-center relative group">
+            <span id="cd-hours" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white countdown-number">00</span>
+            <span class="text-[10px] sm:text-xs text-amber-400/90 uppercase tracking-widest mt-1 font-semibold">Hours</span>
+            <div class="absolute inset-x-0 bottom-0 h-1 bg-amber-500/40 rounded-b-2xl"></div>
+          </div>
+
+          <!-- Minutes -->
+          <div class="bg-slate-950/90 rounded-2xl p-3 sm:p-5 border border-slate-800 flex flex-col items-center justify-center relative group">
+            <span id="cd-minutes" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white countdown-number">00</span>
+            <span class="text-[10px] sm:text-xs text-amber-400/90 uppercase tracking-widest mt-1 font-semibold">Minutes</span>
+            <div class="absolute inset-x-0 bottom-0 h-1 bg-amber-500/40 rounded-b-2xl"></div>
+          </div>
+
+          <!-- Seconds -->
+          <div class="bg-slate-950/90 rounded-2xl p-3 sm:p-5 border border-slate-800 flex flex-col items-center justify-center relative group">
+            <span id="cd-seconds" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-amber-400 countdown-number animate-pulse">00</span>
+            <span class="text-[10px] sm:text-xs text-amber-400/90 uppercase tracking-widest mt-1 font-semibold">Seconds</span>
+            <div class="absolute inset-x-0 bottom-0 h-1 bg-amber-500/40 rounded-b-2xl"></div>
+          </div>
+
+        </div>
+
+        <!-- Quick Action Buttons under Countdown -->
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-3">
+          <button id="add-calendar-btn" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors border border-slate-700">
+            <i data-lucide="calendar-plus" class="w-4 h-4 text-amber-400"></i>
+            Add to Google Calendar
+          </button>
+          <button id="share-event-btn" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors border border-slate-700">
+            <i data-lucide="share-2" class="w-4 h-4 text-amber-400"></i>
+            Share Campus Invite
+          </button>
+          <button id="trigger-confetti-btn" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-semibold transition-colors border border-amber-500/30">
+            <i data-lucide="party-popper" class="w-4 h-4 text-amber-400"></i>
+            Celebrate Confetti 🎉
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400" id="stat-funds">₹38,400</div>
+          <div class="text-xs text-slate-400 font-medium mt-0.5">Funds Collected (₹100/pass)</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white" id="stat-participants">384+</div>
+          <div class="text-xs text-slate-400 font-medium mt-0.5">Campus Attendees</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur">
+          <div class="text-2xl sm:text-3xl font-extrabold text-orange-400" id="stat-performances">26</div>
+          <div class="text-xs text-slate-400 font-medium mt-0.5">Stage Performances</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400" id="stat-messages">190+</div>
+          <div class="text-xs text-slate-400 font-medium mt-0.5">Heartfelt Dedications</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 1: ₹100 CONTRIBUTION & DIGITAL PASS PORTAL -->
+    <section id="donate-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="hand-coins" class="w-4 h-4"></i> Join The Program
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          ₹100 Campus Contribution & Pass
+        </h2>
+        <p class="mt-4 text-slate-400 text-sm sm:text-base">
+          Every rupee collected goes directly towards organizing the grand Teachers' Day felicitation, mementos, high-tea banquet, stage sound/lights, and student-teacher games.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Perks & QR Code Payment Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Pass Card Overview -->
+          <div class="bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-3xl border border-amber-500/40 shadow-glow relative overflow-hidden">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-mono text-xs font-bold border border-amber-500/30">
+                ALL-ACCESS PASS
+              </span>
+              <span class="text-3xl font-extrabold text-white font-mono">₹100 <span class="text-xs text-slate-400 font-normal">/ person</span></span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white mb-3">What's included in your ₹100 Pass?</h3>
+            
+            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                <span><strong>Full-Day Auditorium Entry:</strong> Reserved seating for all cultural acts, awards, and teacher tributes.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                <span><strong>Special High-Tea & Snacks Coupon:</strong> Complimentary festive refreshments & cake cutting.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                <span><strong>Activity & Stage Eligibility:</strong> Free participation in singing, dance, drama, and teacher-student trivia.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                <span><strong>Personalized Digital Event Badge:</strong> Instant QR-verified badge for campus entry.</span>
+              </li>
+            </ul>
+
+            <!-- Dynamic UPI QR Box -->
+            <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 text-center">
+              <div class="text-xs font-semibold text-slate-300 mb-3 flex items-center justify-center gap-1.5">
+                <i data-lucide="qr-code" class="w-4 h-4 text-amber-400"></i>
+                Scan UPI QR to Pay ₹100
+              </div>
+
+              <!-- QR Code Container -->
+              <div class="flex justify-center my-3">
+                <div class="p-3 bg-white rounded-2xl shadow-md" id="upi-qrcode-container">
+                  <!-- QR Code will render here -->
+                </div>
+              </div>
+
+              <div class="text-xs font-mono text-amber-400 mt-2 font-bold select-all" id="upi-id-text">
+                campus.teachersday@upi
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Accepts GPay, PhonePe, Paytm, BHIM & all UPI Apps</p>
+
+              <!-- Quick Launch UPI Button on Mobile -->
+              <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-center gap-2">
+                <a id="upi-direct-link" href="upi://pay?pa=campus.teachersday@upi&pn=Teachers%20Day%20Celebration&am=100&cu=INR&tn=TeachersDayPass" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-xs transition-colors">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  Pay via UPI App (₹100)
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Notice -->
+          <div class="bg-slate-900/50 p-4 rounded-2xl border border-slate-800 text-xs text-slate-400 flex items-start gap-3">
+            <i data-lucide="info" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+            <span>After completing the ₹100 payment in your UPI app, simply copy the <strong>12-digit UTR / Reference Number</strong> or enter your transaction details in the form. Your pass will be generated instantly!</span>
+          </div>
+
+        </div>
+
+        <!-- Right: Registration Form & Ticket Output (7 cols) -->
+        <div class="lg:col-span-7">
+          
+          <div class="bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-xl backdrop-blur-xl">
+            
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+              <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                <i data-lucide="user-plus" class="w-5 h-5 text-amber-400"></i>
+                Attendee Registration Form
+              </h3>
+              <span class="text-xs text-amber-400 font-semibold bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                ₹100 Flat Pass
+              </span>
+            </div>
+
+            <!-- Form -->
+            <form id="donation-form" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Full Name *</label>
+                  <input type="text" id="reg-name" required placeholder="e.g. Aarav Sharma" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Roll No. / College ID *</label>
+                  <input type="text" id="reg-roll" required placeholder="e.g. 23CS042" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Department / Branch *</label>
+                  <select id="reg-dept" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-white text-sm outline-none transition-all">
+                    <option value="">Select Department</option>
+                    <option value="Computer Science & Engg">Computer Science & Engg</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Electronics & Comm. (ECE)">Electronics & Comm. (ECE)</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Business Administration (MBA/BBA)">Business Administration (MBA/BBA)</option>
+                    <option value="Basic Sciences & Humanities">Basic Sciences & Humanities</option>
+                    <option value="Other / Alumni">Other / Alumni / Staff</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Academic Year *</label>
+                  <select id="reg-year" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-white text-sm outline-none transition-all">
+                    <option value="1st Year">1st Year (Freshers)</option>
+                    <option value="2nd Year">2nd Year (Sophomore)</option>
+                    <option value="3rd Year" selected>3rd Year (Junior)</option>
+                    <option value="4th Year">4th Year (Final Year)</option>
+                    <option value="Postgraduate / PhD">Postgraduate / PhD</option>
+                    <option value="Faculty / Staff">Faculty / Staff Member</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Phone Number (WhatsApp) *</label>
+                  <input type="tel" id="reg-phone" required placeholder="e.g. 9876543210" pattern="[0-9]{10}" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Email Address *</label>
+                  <input type="email" id="reg-email" required placeholder="e.g. aarav@campus.edu" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all">
+                </div>
+              </div>
+
+              <!-- Payment Method & UTR / Ref No -->
+              <div class="p-4 rounded-2xl bg-amber-500/5 border border-amber-500/20 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Payment Verification</span>
+                  <span class="text-xs font-semibold text-white bg-amber-500/20 px-2 py-0.5 rounded">Amount: ₹100.00</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Paid Via</label>
+                    <select id="reg-payment-app" class="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs outline-none">
+                      <option value="Google Pay">Google Pay (GPay)</option>
+                      <option value="PhonePe">PhonePe</option>
+                      <option value="Paytm UPI">Paytm UPI</option>
+                      <option value="BHIM UPI">BHIM UPI / Other</option>
+                      <option value="Cash at Desk">Cash handed to Class Rep</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">UPI Ref / UTR / Receipt No. *</label>
+                    <input type="text" id="reg-utr" required placeholder="e.g. 423871982341 (12 digits)" class="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs outline-none focus:border-amber-500">
+                  </div>
+                </div>
+
+                <!-- Also want to participate in performance checkbox -->
+                <div class="pt-2 flex items-center gap-2">
+                  <input type="checkbox" id="reg-wants-perform" class="w-4 h-4 rounded border-slate-700 text-amber-500 focus:ring-amber-500/30 bg-slate-950">
+                  <label for="reg-wants-perform" class="text-xs text-slate-300 cursor-pointer">
+                    I also want to register a <strong>Stage Performance / Activity</strong>!
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-500 text-slate-950 font-bold text-base shadow-glow hover:shadow-glow-lg transition-all flex items-center justify-center gap-2">
+                <i data-lucide="badge-check" class="w-5 h-5"></i>
+                Confirm ₹100 Contribution & Generate Pass
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- DIGITAL PASS / BADGE MODAL / PREVIEW CONTAINER -->
+      <div id="pass-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden transition-all">
+        
+        <div class="relative bg-slate-900 border border-amber-500/40 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl overflow-hidden animate-scale-up">
+          
+          <button id="close-pass-modal" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-full bg-slate-800/80">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+
+          <div class="text-center mb-6">
+            <span class="inline-flex items-center gap-1 text-emerald-400 text-xs font-bold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 mb-2">
+              <i data-lucide="check-check" class="w-3.5 h-3.5"></i> Registration Confirmed!
+            </span>
+            <h3 class="text-2xl font-serif font-bold text-white">Your Official Campus Pass</h3>
+            <p class="text-xs text-slate-400">Save or screenshot this pass for auditorium entry & food counter</p>
+          </div>
+
+          <!-- THE PRINTABLE/DOWNLOADABLE TICKET BADGE -->
+          <div id="ticket-badge-card" class="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-2 border-dashed border-amber-500/50 rounded-2xl p-6 relative overflow-hidden shadow-2xl">
+            
+            <!-- Top Badge Header -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                  🎓
+                </div>
+                <div>
+                  <h4 class="font-serif font-bold text-sm text-white">GURU-UTSAV 2026</h4>
+                  <p class="text-[9px] text-amber-400 uppercase font-mono">Teachers' Day Gala</p>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] font-mono bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20 font-bold" id="badge-ticket-id">PASS #TD26-0001</span>
+                <p class="text-[9px] text-slate-400 mt-0.5">Paid: ₹100 (Verified)</p>
+              </div>
+            </div>
+
+            <!-- Attendee Details Grid -->
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-400 p-0.5 shrink-0 shadow-inner">
+                <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center font-bold text-xl text-amber-400 uppercase" id="badge-avatar">
+                  AS
+                </div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h5 class="font-bold text-base text-white truncate" id="badge-name">Aarav Sharma</h5>
+                <p class="text-xs text-amber-400/90 font-mono truncate" id="badge-roll">Roll: 23CS042</p>
+                <p class="text-xs text-slate-400 truncate" id="badge-dept">Computer Science • 3rd Year</p>
+              </div>
+            </div>
+
+            <!-- Perks Summary Pill -->
+            <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 grid grid-cols-2 gap-2 text-[11px] mb-4">
+              <div class="text-slate-300">
+                <span class="text-slate-500 block text-[9px] uppercase">Entry Zone</span>
+                Auditorium Main Hall
+              </div>
+              <div class="text-slate-300">
+                <span class="text-slate-500 block text-[9px] uppercase">Refreshment Coupon</span>
+                High-Tea Included ✨
+              </div>
+              <div class="text-slate-300">
+                <span class="text-slate-500 block text-[9px] uppercase">Date & Time</span>
+                Sept 5, 2026 • 09:30 AM
+              </div>
+              <div class="text-slate-300">
+                <span class="text-slate-500 block text-[9px] uppercase">Payment Ref</span>
+                <span class="font-mono text-emerald-400" id="badge-utr">UTR: 423871982341</span>
+              </div>
+            </div>
+
+            <!-- QR Verification Footer -->
+            <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+              <div class="text-left">
+                <span class="text-[9px] text-slate-500 uppercase block">Security Verification</span>
+                <span class="text-[10px] text-emerald-400 font-bold flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3 h-3"></i> Authenticated Pass
+                </span>
+              </div>
+              <div id="badge-qrcode" class="p-1 bg-white rounded-lg shadow-sm">
+                <!-- Badge QR Code injected dynamically -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-6 grid grid-cols-2 gap-3">
+            <button id="download-pass-btn" class="py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-glow">
+              <i data-lucide="download" class="w-4 h-4"></i> Download Pass (PNG)
+            </button>
+            <button id="print-pass-btn" class="py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <i data-lucide="printer" class="w-4 h-4"></i> Print Pass
+            </button>
+          </div>
+
+          <div class="mt-3 text-center">
+            <a href="#activities-section" id="modal-to-activities" class="text-xs text-amber-400 hover:underline inline-flex items-center gap-1 font-semibold">
+              Now register for Stage Activities & Performances &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 2: ACTIVITY & STAGE PERFORMANCE REGISTRATION -->
+    <section id="activities-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="mic" class="w-4 h-4"></i> Take The Stage
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          Performance & Activity Signup
+        </h2>
+        <p class="mt-4 text-slate-400 text-sm sm:text-base">
+          Showcase your talents and bring smiles to our mentors! Register your solo or group acts in music, dance, drama, comedy, or teacher-student fun activities.
+        </p>
+      </div>
+
+      <!-- Categories Highlights Carousel / Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-12">
+        
+        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 text-center hover:border-amber-500/50 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="music" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-white">Singing & Band</h4>
+          <p class="text-[10px] text-slate-400 mt-0.5">Solo / Duet / Band</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 text-center hover:border-orange-500/50 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-orange-500/10 text-orange-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-white">Dance</h4>
+          <p class="text-[10px] text-slate-400 mt-0.5">Classical / Fusion</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 text-center hover:border-purple-500/50 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="clapperboard" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-white">Drama & Skit</h4>
+          <p class="text-[10px] text-slate-400 mt-0.5">Tribute & Comedy</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 text-center hover:border-emerald-500/50 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-white">Poetry & Speech</h4>
+          <p class="text-[10px] text-slate-400 mt-0.5">Shayari & Tributes</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 text-center hover:border-pink-500/50 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="smile" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-white">Stand-up Comedy</h4>
+          <p class="text-[10px] text-slate-400 mt-0.5">Classroom Humor</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 text-center hover:border-blue-500/50 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="trophy" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-white">Faculty Games</h4>
+          <p class="text-[10px] text-slate-400 mt-0.5">Quiz & Charades</p>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Performance Registration Form (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-xl backdrop-blur-xl">
+          
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+            <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+              <i data-lucide="ticket" class="w-5 h-5 text-purple-400"></i>
+              Register Your Act / Game Entry
+            </h3>
+            <span class="text-xs text-purple-400 font-semibold bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+              Free with ₹100 Pass
+            </span>
+          </div>
+
+          <form id="performance-form" class="space-y-4">
+            
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Act / Performance Title *</label>
+              <input type="text" id="perf-title" required placeholder="e.g. 'Ode to Our Gurus' Musical Medley / Skit on Backbenchers" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white placeholder-slate-500 text-sm outline-none">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Performance Category *</label>
+                <select id="perf-category" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white text-sm outline-none">
+                  <option value="Singing (Solo/Duet)">Singing (Solo / Duet)</option>
+                  <option value="Acoustic Band / Choir">Acoustic Band / Choir</option>
+                  <option value="Classical / Fusion Dance">Classical / Fusion Dance</option>
+                  <option value="Group Bollywood Dance">Group Bollywood Dance</option>
+                  <option value="Drama / Theatrical Skit">Drama / Theatrical Skit</option>
+                  <option value="Stand-up Comedy">Stand-up Comedy</option>
+                  <option value="Poetry / Shayari / Speech">Poetry / Shayari / Speech</option>
+                  <option value="Anchoring / Host">Event Anchoring / Emcee</option>
+                  <option value="Teacher-Student Quiz / Game">Teacher-Student Game / Quiz</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Estimated Duration (mins) *</label>
+                <select id="perf-duration" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 text-white text-sm outline-none">
+                  <option value="3-5 Minutes">3 - 5 Minutes (Solo / Poetry / Speech)</option>
+                  <option value="5-7 Minutes" selected>5 - 7 Minutes (Dance / Song)</option>
+                  <option value="8-12 Minutes">8 - 12 Minutes (Skit / Band / Group)</option>
+                  <option value="15+ Minutes">15+ Minutes (Interactive Game)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Lead Performer / Contact Person *</label>
+                <input type="text" id="perf-lead" required placeholder="e.g. Diya Patel" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 text-white placeholder-slate-500 text-sm outline-none">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Pass Ticket ID / Roll No *</label>
+                <input type="text" id="perf-pass-id" required placeholder="e.g. PASS #TD26-0001 or Roll No" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 text-white placeholder-slate-500 text-sm outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Group Members & Names (If Group Act)</label>
+              <textarea id="perf-members" rows="2" placeholder="e.g. Aarav S. (Guitar), Sneha R. (Vocals), Rohan V. (Cajon)" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 text-white placeholder-slate-500 text-sm outline-none resize-none"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Stage & Audio Requirements</label>
+              <input type="text" id="perf-reqs" placeholder="e.g. 2 Wireless Mics, Bluetooth track playback, 3 chairs" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-purple-500 text-white placeholder-slate-500 text-sm outline-none">
+            </div>
+
+            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-base shadow-lg transition-all flex items-center justify-center gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              Submit Performance Slot Registration
+            </button>
+
+          </form>
+
+        </div>
+
+        <!-- Right: Registered Acts Line-up & Schedule (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="bg-slate-900/60 p-6 rounded-3xl border border-slate-800 backdrop-blur-xl">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-base font-bold text-white flex items-center gap-2">
+                <i data-lucide="list-music" class="w-4 h-4 text-purple-400"></i>
+                Registered Acts & Lineup
+              </h3>
+              <span class="text-xs font-mono text-purple-300 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20" id="acts-counter-badge">
+                6 Featured Slots
+              </span>
+            </div>
+
+            <!-- Scrollable list of registered performances -->
+            <div id="performances-list" class="space-y-3 max-h-[420px] overflow-y-auto pr-1">
+              <!-- Dynamically populated -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 3: WALL OF GRATITUDE (TEACHER DEDICATION WALL) -->
+    <section id="gratitude-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="heart" class="w-4 h-4"></i> Wall of Gratitude
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          Say Thank You to Your Mentors
+        </h2>
+        <p class="mt-4 text-slate-400 text-sm sm:text-base">
+          Post heart-warming messages, cherished classroom memories, and send virtual gifts (💐 Roses, 🍫 Chocolates, ⭐ Stars) to the teachers who inspired your journey.
+        </p>
+      </div>
+
+      <!-- Post a Message Bar / Toggle -->
+      <div class="bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 p-6 rounded-3xl border border-pink-500/30 max-w-4xl mx-auto mb-12 shadow-xl">
+        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <i data-lucide="pen-tool" class="w-5 h-5 text-pink-400"></i> Write a Dedication Note
+        </h3>
+
+        <form id="dedication-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Your Name *</label>
+              <input type="text" id="ded-author" required placeholder="e.g. Sneha Roy (3rd Yr CS)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm outline-none focus:border-pink-500">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Teacher's Name *</label>
+              <input type="text" id="ded-teacher" required placeholder="e.g. Prof. Rajesh Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm outline-none focus:border-pink-500">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Virtual Gift Tag</label>
+              <select id="ded-gift" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm outline-none focus:border-pink-500">
+                <option value="💐 Bouquet of Roses">💐 Bouquet of Roses</option>
+                <option value="⭐ Best Mentor Star">⭐ Best Mentor Star</option>
+                <option value="🍫 Sweet Chocolate Box">🍫 Sweet Chocolate Box</option>
+                <option value="🏆 Golden Trophy Award">🏆 Golden Trophy Award</option>
+                <option value="☕ Endless Coffee Cup">☕ Endless Coffee Cup</option>
+                <option value="🌺 Lotus of Wisdom">🌺 Lotus of Wisdom</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Heartfelt Message / Memory *</label>
+            <textarea id="ded-message" required rows="3" placeholder="Thank you for always believing in me when my code refused to compile, and for teaching with so much patience and joy! Happy Teachers' Day!" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm outline-none focus:border-pink-500 resize-none"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-400">Card Theme:</span>
+              <div class="flex items-center gap-1.5" id="theme-selector">
+                <button type="button" data-theme="amber" class="theme-btn w-6 h-6 rounded-full bg-amber-500 ring-2 ring-white transition-all"></button>
+                <button type="button" data-theme="pink" class="theme-btn w-6 h-6 rounded-full bg-pink-500 hover:ring-2 hover:ring-white transition-all"></button>
+                <button type="button" data-theme="purple" class="theme-btn w-6 h-6 rounded-full bg-purple-500 hover:ring-2 hover:ring-white transition-all"></button>
+                <button type="button" data-theme="emerald" class="theme-btn w-6 h-6 rounded-full bg-emerald-500 hover:ring-2 hover:ring-white transition-all"></button>
+              </div>
+            </div>
+
+            <button type="submit" class="py-2.5 px-6 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-400 hover:to-rose-400 text-white font-bold text-sm shadow-md transition-all flex items-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i> Post on Gratitude Wall
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Filter / Search Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div class="relative w-full sm:w-80">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="wall-search" placeholder="Search teacher or student name..." class="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs outline-none focus:border-amber-500">
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1" id="wall-filter-group">
+          <button class="wall-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition-colors" data-filter="all">All Notes</button>
+          <button class="wall-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors" data-filter="bouquet">💐 Bouquets</button>
+          <button class="wall-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors" data-filter="star">⭐ Stars</button>
+          <button class="wall-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors" data-filter="trophy">🏆 Trophies</button>
+        </div>
+      </div>
+
+      <!-- Gratitude Wall Cards Masonry / Grid -->
+      <div id="gratitude-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamically rendered -->
+      </div>
+
+    </section>
+
+    <!-- SECTION 4: FACULTY SPOTLIGHT & CAMPUS AWARDS -->
+    <section id="spotlight-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="award" class="w-4 h-4"></i> Hall of Fame
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          Faculty Spotlight & Campus Awards
+        </h2>
+        <p class="mt-4 text-slate-400 text-sm sm:text-base">
+          Cast your vote for the Teacher Awards 2026. Results will be announced live on stage during the grand gala ceremony!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Faculty Profiles (7 cols) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4" id="faculty-cards-container">
+          <!-- Dynamic Faculty Profiles -->
+        </div>
+
+        <!-- Right: Live Voting Poll (5 cols) -->
+        <div class="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 rounded-3xl border border-amber-500/30 shadow-xl backdrop-blur-xl">
+          
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+            <div>
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <i data-lucide="vote" class="w-5 h-5 text-amber-400"></i>
+                Student Choice Awards Poll
+              </h3>
+              <p class="text-xs text-slate-400 mt-0.5">Live campus voting (1 vote per pass)</p>
+            </div>
+            <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full border border-emerald-500/20 font-bold">
+              ● Live Poll
+            </span>
+          </div>
+
+          <!-- Poll Categories -->
+          <div id="voting-poll-container" class="space-y-5">
+            <!-- Dynamic Polls -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 5: EVENT DAY SCHEDULE -->
+    <section id="schedule-section" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Program Flow
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          September 5th Gala Itinerary
+        </h2>
+        <p class="mt-4 text-slate-400 text-sm sm:text-base">
+          Join us from morning till evening in the Main University Auditorium for an action-packed day of honor, music, games, and laughter.
+        </p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative border-l-2 border-amber-500/30 ml-4 sm:ml-32 space-y-8 py-4">
+        
+        <!-- Slot 1 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-slate-950"></div>
+          <span class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-amber-400 block sm:inline">09:00 - 09:30 AM</span>
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-colors">
+            <h4 class="text-base font-bold text-white">Campus Arrival & Red Carpet Teacher Welcome</h4>
+            <p class="text-xs text-slate-400 mt-1">Student council badge distribution, traditional tilak, and welcome flower garlands for all faculty members at the auditorium foyer.</p>
+          </div>
+        </div>
+
+        <!-- Slot 2 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-slate-950"></div>
+          <span class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-amber-400 block sm:inline">09:30 - 10:30 AM</span>
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-colors">
+            <h4 class="text-base font-bold text-white">Inaugural Lamp Lighting & Principal's Keynote Address</h4>
+            <p class="text-xs text-slate-400 mt-1">Saraswati Vandana prayer, tribute to Dr. Sarvepalli Radhakrishnan, and official welcome address by dignitaries.</p>
+          </div>
+        </div>
+
+        <!-- Slot 3 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-slate-950"></div>
+          <span class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-amber-400 block sm:inline">10:30 - 12:30 PM</span>
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-colors">
+            <h4 class="text-base font-bold text-white">Student Cultural Extravaganza (Act Phase 1)</h4>
+            <p class="text-xs text-slate-400 mt-1">Solo & group dances, classroom comedy skits, retro acoustic band tributes, and poetry recitals dedicated to faculty.</p>
+          </div>
+        </div>
+
+        <!-- Slot 4 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-400 ring-4 ring-slate-950"></div>
+          <span class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-emerald-400 block sm:inline">12:30 - 02:00 PM</span>
+          <div class="bg-gradient-to-r from-emerald-950/40 to-slate-900 p-5 rounded-2xl border border-emerald-500/30">
+            <div class="flex items-center justify-between">
+              <h4 class="text-base font-bold text-emerald-300">Grand Festive High-Tea & Luncheon Banquet</h4>
+              <span class="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">Pass Included</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">Networking lunch, student-faculty interaction booths, photo booth, and dessert counters.</p>
+          </div>
+        </div>
+
+        <!-- Slot 5 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-slate-950"></div>
+          <span class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-amber-400 block sm:inline">02:00 - 03:45 PM</span>
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-colors">
+            <h4 class="text-base font-bold text-white">Faculty vs Student Fun Olympiad & Pictionary</h4>
+            <p class="text-xs text-slate-400 mt-1">Hilarious dumb charades, teacher trivia showdown, musical chairs, and stand-up acts.</p>
+          </div>
+        </div>
+
+        <!-- Slot 6 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-slate-950"></div>
+          <span class="sm:absolute sm:-left-32 sm:top-1 text-xs font-mono font-bold text-amber-400 block sm:inline">03:45 - 05:00 PM</span>
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-colors">
+            <h4 class="text-base font-bold text-white">Campus Awards Gala, Grand Cake Cutting & Memento Honors</h4>
+            <p class="text-xs text-slate-400 mt-1">Announcement of voting winners, memento presentations to each teacher, 50kg festive cake cutting, and closing DJ jam.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 6: ORGANIZER / ADMIN DASHBOARD (MODAL / OVERLAY) -->
+    <div id="admin-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-lg hidden">
+      
+      <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+        
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">Event Organizer Portal</h3>
+              <p class="text-xs text-slate-400">Manage ₹100 contributions, verify UTR payments, view act line-ups, and export rosters</p>
+            </div>
+          </div>
+          <button id="close-admin-modal" class="p-2 text-slate-400 hover:text-white rounded-full bg-slate-800">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Admin KPI Metrics -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+          <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+            <span class="text-xs text-slate-400">Total Funds Raised</span>
+            <div class="text-2xl font-bold text-amber-400 font-mono" id="admin-total-funds">₹38,400</div>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+            <span class="text-xs text-slate-400">Pass Registrations</span>
+            <div class="text-2xl font-bold text-white font-mono" id="admin-total-passes">384</div>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+            <span class="text-xs text-slate-400">Performance Acts</span>
+            <div class="text-2xl font-bold text-purple-400 font-mono" id="admin-total-acts">26</div>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+            <span class="text-xs text-slate-400">Dedication Letters</span>
+            <div class="text-2xl font-bold text-pink-400 font-mono" id="admin-total-deds">190</div>
+          </div>
+        </div>
+
+        <!-- Admin Tabs -->
+        <div class="flex items-center gap-2 border-b border-slate-800 pb-3 mb-4 flex-wrap">
+          <button id="admin-tab-passes" class="admin-tab active px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950">
+            ₹100 Registrations & Passes (<span id="admin-count-passes">0</span>)
+          </button>
+          <button id="admin-tab-acts" class="admin-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+            Performance Slots (<span id="admin-count-acts">0</span>)
+          </button>
+          <div class="sm:ml-auto flex items-center gap-2 mt-2 sm:mt-0">
+            <button id="export-csv-btn" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+              <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i> Export CSV
+            </button>
+            <button id="reset-demo-btn" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-red-900/50 hover:text-red-300 text-slate-400 text-xs font-semibold transition-colors">
+              Reset Demo Data
+            </button>
+          </div>
+        </div>
+
+        <!-- Table 1: Pass Registrations -->
+        <div id="admin-view-passes" class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950 text-slate-400 uppercase font-mono text-[10px]">
+              <tr>
+                <th class="p-3">Pass ID</th>
+                <th class="p-3">Name</th>
+                <th class="p-3">Roll No</th>
+                <th class="p-3">Dept & Year</th>
+                <th class="p-3">Payment Info</th>
+                <th class="p-3">Status</th>
+                <th class="p-3 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-passes-tbody" class="divide-y divide-slate-800/60 font-sans">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Table 2: Performance Registrations -->
+        <div id="admin-view-acts" class="overflow-x-auto hidden">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950 text-slate-400 uppercase font-mono text-[10px]">
+              <tr>
+                <th class="p-3">Act Title</th>
+                <th class="p-3">Category</th>
+                <th class="p-3">Lead Performer</th>
+                <th class="p-3">Duration</th>
+                <th class="p-3">Requirements</th>
+                <th class="p-3">Slot Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-acts-tbody" class="divide-y divide-slate-800/60 font-sans">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 pt-12 pb-24 md:pb-12 relative z-10 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <span class="font-serif font-bold text-2xl text-white">Guru<span class="text-amber-400">Utsav</span> 2026</span>
+      </div>
+      <p class="text-xs text-slate-400 max-w-md mx-auto">
+        Organized with love and devotion by the Student Council & Cultural Committee in honor of our esteemed Faculty Members.
+      </p>
+      <div class="text-[11px] text-slate-500 font-mono">
+        "A teacher affects eternity; he can never tell where his influence stops." — Henry Adams
+      </div>
+      <div class="pt-4 border-t border-slate-900 flex items-center justify-center gap-2 text-xs text-slate-400 font-medium">
+        <span>Crafted with</span>
+        <span class="text-rose-500 animate-pulse text-base inline-block">❤️</span>
+        <span>by <span class="text-amber-400 font-bold tracking-wide">Mrinmoy</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Android Mobile Bottom Navigation Bar -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-2xl border-t border-slate-800/90 flex items-center justify-around py-2 px-1 text-[10px] font-semibold text-slate-400 shadow-2xl">
+    <a href="#countdown-section" class="flex flex-col items-center gap-1 hover:text-amber-400 transition-colors py-1 px-2">
+      <i data-lucide="clock" class="w-4 h-4"></i>
+      <span>Timer</span>
+    </a>
+    <a href="#donate-section" class="flex flex-col items-center gap-1 text-amber-400 py-1 px-2">
+      <i data-lucide="ticket" class="w-4 h-4 text-amber-400"></i>
+      <span class="font-bold">₹100 Pass</span>
+    </a>
+    <a href="#activities-section" class="flex flex-col items-center gap-1 hover:text-amber-400 transition-colors py-1 px-2">
+      <i data-lucide="mic" class="w-4 h-4"></i>
+      <span>Acts</span>
+    </a>
+    <a href="#gratitude-section" class="flex flex-col items-center gap-1 hover:text-amber-400 transition-colors py-1 px-2">
+      <i data-lucide="heart" class="w-4 h-4"></i>
+      <span>Wall</span>
+    </a>
+    <a href="#spotlight-section" class="flex flex-col items-center gap-1 hover:text-amber-400 transition-colors py-1 px-2">
+      <i data-lucide="award" class="w-4 h-4"></i>
+      <span>Awards</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

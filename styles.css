@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Teachers' Day Special Campus Portal (Guru-Utsav 2026) Stylesheet
+   ========================================================================== */
+
+/* Custom Animations & Keyframes */
+@keyframes bounceShort {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px 2px rgba(245, 158, 11, 0.6);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-bounce-short {
+  animation: bounceShort 2.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glowPulse 3s infinite;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Countdown Number Styling */
+.countdown-number {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Dynamic QR Code in Badge & Payment */
+#upi-qrcode-container img,
+#badge-qrcode img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ticket Badge Styling with Perforated Edges */
+#ticket-badge-card {
+  position: relative;
+  background: radial-gradient(circle at top right, #1e1b4b 0%, #0f172a 50%, #020617 100%);
+}
+
+#ticket-badge-card::before,
+#ticket-badge-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #0f172a;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+#ticket-badge-card::before {
+  left: -10px;
+  box-shadow: inset -2px 0 3px rgba(0,0,0,0.5);
+}
+
+#ticket-badge-card::after {
+  right: -10px;
+  box-shadow: inset 2px 0 3px rgba(0,0,0,0.5);
+}
+
+/* Gratitude Card Themes */
+.card-theme-amber {
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.4) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+.card-theme-amber:hover {
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15);
+}
+
+.card-theme-pink {
+  background: linear-gradient(135deg, rgba(80, 7, 36, 0.3) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-color: rgba(244, 63, 94, 0.3);
+}
+.card-theme-pink:hover {
+  border-color: rgba(244, 63, 94, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.15);
+}
+
+.card-theme-purple {
+  background: linear-gradient(135deg, rgba(59, 7, 100, 0.3) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+.card-theme-purple:hover {
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.15);
+}
+
+.card-theme-emerald {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.3) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.card-theme-emerald:hover {
+  border-color: rgba(16, 185, 129, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+}
+
+/* Print Specific Rules for Pass Badges */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #ticket-badge-card,
+  #ticket-badge-card * {
+    visibility: visible;
+  }
+  #ticket-badge-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+    border: 2px solid #000 !important;
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #ticket-badge-card h4, 
+  #ticket-badge-card h5, 
+  #ticket-badge-card span, 
+  #ticket-badge-card p,
+  #ticket-badge-card div {
+    color: #000 !important;
+  }
+}
